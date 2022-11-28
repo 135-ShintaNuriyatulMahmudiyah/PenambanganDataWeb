@@ -29,9 +29,7 @@ with tab1:
 with tab2:
     data.head()
 
-    X = data.drop(columns=["race/ethnicity"])
-
-    X.head()
+   
 
     # Mengambil kolom Rata-rata overdue dan mentranformasi menggunakan one-hot encoding
     rata_overdue = pd.get_dummies(X["rata_rata_overdue"], prefix="overdue")
