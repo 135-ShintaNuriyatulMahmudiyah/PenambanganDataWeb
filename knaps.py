@@ -23,13 +23,13 @@ tab1, tab2, tab3, tab4 = st.tabs(["Import Data", "Preprocessing", "Modelling", "
 
 with tab1:
     st.write("Import Data")
-    data = pd.read_csv("https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/credit_score.csv")
+    data = pd.read_csv("https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/exams.csv")
     st.dataframe(data)
 
 with tab2:
     data.head()
 
-    X = data.drop(columns=["risk_rating"])
+    X = data.drop(columns=["race/ethnicity"])
 
     X.head()
 
@@ -39,13 +39,13 @@ with tab2:
 
     X = X.drop(columns="rata_rata_overdue")
 
-    labels = data["risk_rating"]
+    labels = data["race/ethnicity"]
     # 
     KPR_status = pd.get_dummies(X["kpr_aktif"], prefix="KPR")
     X = X.join(KPR_status)
 
     # remove "rata_rata_overdue" feature
-    X = X.drop(columns = "kpr_aktif")
+    X = X.drop(columns = "gender")
 
     st.write("Menampilkan dataframe yang rata-rata overdue, risk rating dan kpr aktif sudah di drop")
     st.dataframe(X)
