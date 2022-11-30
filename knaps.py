@@ -42,17 +42,6 @@ with tab2:
     df= df.drop(columns=['fruit_name','fruit_subtype'])
     df.head()
     
-    #pisahkan dengan dataset asli
-    #Modal x menyimpan fitur kumpulan data kami tanpa label.
-    #Huruf kecil y memegang label yang sesuai untuk instance di x.
-    x = df[["mass","width","height","color_score"]]
-    y = df["fruit_label"].values
-    
-    #fungsi MinMaxScaler digunakan untuk mengubah skala nilai terkecil dan terbesar dari dataset ke skala tertentu.pada dataset ini skala terkecil =0, skala terbesar=1
-    scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
-    x_scaled= scaler.fit_transform(x)
-    x_scaled
-    
 
    
 
