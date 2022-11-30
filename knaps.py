@@ -33,8 +33,9 @@ with tab1:
     data = pd.read_table("https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/fruit_data_with_colors.txt")
     st.dataframe(data)
 with tab2:
+    st.write("""# Preprocessing""")
     data.head()
-
+    data[["fruit_label", "fruit_name", "fruit_subtype", "mass", "width", "height", "color_score"]]
     X = data.drop(columns=["fruit_name","fruit_subtype"])
 
     X.head()
