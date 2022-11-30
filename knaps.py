@@ -35,7 +35,7 @@ with tab1:
 with tab2:
     st.write("""# Preprocessing""")
     data[["fruit_label", "fruit_name", "fruit_subtype", "mass", "width", "height", "color_score"]]
-    X = data.drop(columns=["fruit_name","fruit_subtype"])
+    X=data.drop(['fruit_name','fruit_subtype'],axis=1)
 
     X.head()
     
