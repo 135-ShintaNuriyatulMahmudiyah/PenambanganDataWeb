@@ -42,7 +42,7 @@ with tab2:
     x = data[["mass","width","height","color_score"]]
     y = data["fruit_label"].values
     
-    st.write("Normalisasi MinMaxScaler")
+    st.write("""# Normalisasi MinMaxScaler""")
     
     scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
     x_scaled= scaler.fit_transform(x)
