@@ -34,7 +34,7 @@ with tab1:
     st.dataframe(data)
 with tab2:
     st.write("""# Preprocessing""")
-    st.write("""# Membuang Fitur yang tidak diperlukan""")
+    "### Membuang fitur yang tidak diperlukan"
     data['fruit_name'].value_counts()
     X=data.drop(columns=['fruit_name','fruit_subtype'],axis=1)
 
