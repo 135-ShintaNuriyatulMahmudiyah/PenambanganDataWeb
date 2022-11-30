@@ -86,7 +86,7 @@ with tab3:
     # KNN 
     K=10
     knn=KNeighborsClassifier(n_neighbors=K)
-    knn.fit(X_train,y_train)
+    knn.fit(x_train,y_train)
     y_pred=knn.predict(x_test)
 
     skor_akurasi = round(100 * accuracy_score(y_test,y_pred))
