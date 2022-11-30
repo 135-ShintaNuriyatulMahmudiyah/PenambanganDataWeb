@@ -41,7 +41,10 @@ with tab2:
     
     #membuang data yang tidak digunakan
     df.head()
-    df=df.drop(['fruit_name','fruit_subtype'],axis=1)
+
+    df= df.drop(columns=['fruit_name','fruit_subtype'])
+
+    
     df.head()
     
     #pisahkan dengan dataset asli
