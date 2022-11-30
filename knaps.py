@@ -38,7 +38,7 @@ with tab1:
         st.dataframe(df)
 with tab2:
     st.write("""# Preprocessing""")
-    df[["fruit_label", "fruit_name","fruit_subtype", "mass", "width", "height", "color_score"]]
+    df
     #membuang data yang tidak digunakan
     
     df=df.drop(['fruit_name','fruit_subtype'],axis=1)
