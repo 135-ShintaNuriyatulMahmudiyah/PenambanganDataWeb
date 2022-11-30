@@ -146,7 +146,7 @@ def submit():
         y_pred3 = model1.predict(inputs)
         st.write(f"Berdasarkan data yang Anda masukkan, maka anda dinyatakan : {le.inverse_transform(y_pred3)[0]}")
 
-    all = st.button("Submit")
+all = st.button("Submit")
     if all :
         st.balloons()
         submit()
