@@ -24,7 +24,7 @@ st.title("Fruit With Color")
 st.write("=========================================================================")
 
 st.write("Name :Shinta Nuriyatul Mahmudiyah")
-st.write("Nim  :200411100135")
+st.write("Nim    :200411100135")
 st.write("Grade: Penambangan Data A")
 tab1, tab2, tab3, tab4 = st.tabs(["Import Data", "Preprocessing", "Modelling", "Implementation"])
 with tab1:
