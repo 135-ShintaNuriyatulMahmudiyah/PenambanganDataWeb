@@ -34,7 +34,6 @@ with tab1:
     st.dataframe(data)
 with tab2:
     st.write("""# Preprocessing""")
-    data.head()
     data[["fruit_label", "fruit_name", "fruit_subtype", "mass", "width", "height", "color_score"]]
     X = data.drop(columns=["fruit_name","fruit_subtype"])
 
