@@ -34,7 +34,6 @@ with tab1:
     st.dataframe(data)
 with tab2:
     st.write("""# Preprocessing""")
-    data[["fruit_label", "mass", "width", "height", "color_score"]]
     data['fruit_name'].value_counts()
     X=data.drop(columns=['fruit_name','fruit_subtype'],axis=1)
 
