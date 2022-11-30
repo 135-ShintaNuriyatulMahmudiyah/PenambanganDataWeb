@@ -44,7 +44,7 @@ with tab2:
     y = data["fruit_label"].values
     
     st.write("""# Normalisasi MinMaxScaler""")
-    "### Mengubah skala nilai terkecil dan terbesar dari dataset ke skala tertentu.pada dataset ini skala terkecil =0, skala terbesar=1"
+    "### Mengubah skala nilai terkecil dan terbesar dari dataset ke skala tertentu.pada dataset ini skala terkecil = 0, skala terbesar= 1"
     
     scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
     x_scaled= scaler.fit_transform(x)
@@ -125,6 +125,32 @@ with tab3:
         )
 
         st.altair_chart(bar_chart,use_container_width=True)
+with tab4:
+    st.write("# Implementation")
+    mass = st.number_input('Masukkan berat buah')
+
+    # width
+    width = st.number_input('Masukkan lebar buah')
+    
+
+    # height
+    width = st.number_input('Masukkan tinggi buah')
+
+    #color_score
+    color_score = st.number_input('Masukkan nilai warna buah')
+def submit():
+        # input
+        inputs = np.array([[mass,width,height,color_score]])
+        le = joblib.load("le.save")
+        model1 = joblib.load("knn.joblib")
+        y_pred3 = model1.predict(inputs)
+        st.write(f"Berdasarkan data yang Anda masukkan, maka anda dinyatakan : {le.inverse_transform(y_pred3)[0]}")
+
+    all = st.button("Submit")
+    if all :
+        st.balloons()
+        submit()
+
     
 
    
