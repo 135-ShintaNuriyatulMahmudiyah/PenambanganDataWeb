@@ -24,7 +24,7 @@ st.title("Fruit With Color")
 st.write("=========================================================================")
 
 st.write("Name :Shinta Nuriyatul Mahmudiyah")
-st.write("Nim    :200411100135")
+st.write("Nim  :200411100135")
 st.write("Grade: Penambangan Data A")
 tab1, tab2, tab3, tab4 = st.tabs(["Import Data", "Preprocessing", "Modelling", "Implementation"])
 with tab1:
@@ -48,6 +48,24 @@ with tab2:
     scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
     x_scaled= scaler.fit_transform(x)
     x_scaled
+with tab3:
+    x_train, x_test,y_train,y_test= train_test_split(x,y,random_state=0)    
+    x_train_scaled, x_test_scaled,y_train_scaled,y_test_scaled= train_test_split(x_scaled,y,random_state=0)
+    from sklearn.preprocessing import StandardScaler
+    sc = StandardScaler()
+    x_train = sc.fit_transform(x_train)
+    x_test = sc.transform(x_test)
+    # from sklearn.feature_extraction.text import CountVectorizer
+    # cv = CountVectorizer()
+    # x_train = cv.fit_transform(x_train)
+    # x_test = cv.fit_transform(x_test)
+    st.write("""# Modeling """)
+    st.subheader("Berikut ini adalah pilihan untuk Modeling")
+    st.write("Pilih Model yang Anda inginkan untuk Cek Akurasi")
+    naive = st.checkbox('Naive Bayes')
+    kn = st.checkbox('K-Nearest Neighbor')
+    des = st.checkbox('Decision Tree')
+    mod = st.button("Modeling")
     
 
    
