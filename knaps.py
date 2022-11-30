@@ -38,12 +38,11 @@ with tab2:
     X=data.drop(columns=['fruit_name','fruit_subtype'],axis=1)
 
     X
-    #Memisahkan dengan dataset asli dimana Modal x = menyimpan fitur kumpulan data kami tanpa label dan Huruf kecil y =memegang label yang sesuai untuk instance di x.
     
     x = data[["mass","width","height","color_score"]]
     y = data["fruit_label"].values
     
-    st.write(""#Normalisasi MinMaxScaler digunakan untuk mengubah skala nilai terkecil dan terbesar dari dataset ke skala tertentu.pada dataset ini skala terkecil =0, skala terbesar=1"")
+    st.write("""#Normalisasi MinMaxScaler """)
     
     scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
     x_scaled= scaler.fit_transform(x)
