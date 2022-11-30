@@ -39,6 +39,13 @@ with tab2:
 
     X
     
+    x = data[["mass","width","height","color_score"]]
+    y = data["fruit_label"].values
+    
+    scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
+    x_scaled= scaler.fit_transform(x)
+    x_scaled
+    
 
    
 
