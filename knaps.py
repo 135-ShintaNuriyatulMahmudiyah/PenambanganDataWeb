@@ -19,9 +19,7 @@ from sklearn.svm import SVC
 import altair as alt
 from sklearn.utils.validation import joblib
 
-st.write(""" 
-# Penambangan Data Web
-""")
+st.title("Penambangan Data Web")
 
 st.write("=========================================================================")
 
@@ -31,14 +29,15 @@ st.write("Grade: Penambangan Data A")
 tab1,tab2,tab3,tab4 = st.tabs(["Upload Data", "Prepocessing", "Modeling", "Implementation"])
 with tab1:
     st.write("""# Upload File""")
-    st.write("Dataset yang digunakan adalah healthcare-dataset-stroke-data dataset yang diambil dari https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
+    st.write("Dataset yang digunakan adalah fruit with color datset yang diambil dari https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
     st.write("Total datanya adalah ... dengan data training ..... dan data testing ...... ")
-    uploaded_files = st.file_uploader("Upload file CSV", accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload file TXT", accept_multiple_files=True)
     for uploaded_file in uploaded_files:
         df = pd.read_table(uploaded_file)
         st.write("Nama File Anda = ", uploaded_file.name)
         st.dataframe(df)
-
+with tab2:
+    st.write("""# Preprocessing""")
   
    
 
