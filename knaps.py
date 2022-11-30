@@ -38,6 +38,7 @@ with tab1:
         st.dataframe(df)
 with tab2:
     st.write("""# Preprocessing""")
+    st.dataframe(df)
     df.head()
     df= df.drop(columns=['fruit_name','fruit_subtype'])
     df.head()
