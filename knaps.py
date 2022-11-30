@@ -38,9 +38,9 @@ with tab1:
         st.dataframe(df)
 with tab2:
     st.write("""# Preprocessing""")
-    df
-    #membuang data yang tidak digunakan
     
+    #membuang data yang tidak digunakan
+    df.head()
     df=df.drop(['fruit_name','fruit_subtype'],axis=1)
     df.head()
     
