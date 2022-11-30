@@ -29,7 +29,7 @@ st.write("Grade: Penambangan Data A")
 tab1,tab2,tab3,tab4 = st.tabs(["Upload Data", "Prepocessing", "Modeling", "Implementation"])
 with tab1:
     st.write("""# Upload File""")
-    st.write("Dataset yang digunakan adalah fruit with color datset yang diambil dari https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
+    st.write("Dataset yang digunakan adalah fruit with color dataset yang diambil dari https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
     st.write("Total datanya adalah ... dengan data training ..... dan data testing ...... ")
     uploaded_files = st.file_uploader("Upload file TXT", accept_multiple_files=True)
     for uploaded_file in uploaded_files:
@@ -38,6 +38,23 @@ with tab1:
         st.dataframe(df)
 with tab2:
     st.write("""# Preprocessing""")
+    #membuang data yang tidak digunakan
+    df=df.drop(['fruit_name','fruit_subtype'],axis=1)
+    df.head()
+    
+    #pisahkan dengan dataset asli
+    #Modal x menyimpan fitur kumpulan data kami tanpa label.
+    #Huruf kecil y memegang label yang sesuai untuk instance di x.
+    x = df[["mass","width","height","color_score"]]
+    y = df["fruit_label"].values
+    
+    #fungsi MinMaxScaler digunakan untuk mengubah skala nilai terkecil dan terbesar dari dataset ke skala tertentu.pada dataset ini skala terkecil =0, skala terbesar=1
+    scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
+    x_scaled= scaler.fit_transform(x)
+    x_scaled
+    
+    x_train, x_test,y_train,y_test= train_test_split(x,y,random_state=0)
+    x_train_scaled, x_test_scaled,y_train_scaled,y_test_scaled= train_test_split(x_scaled,y,random_state=0)
   
    
 
