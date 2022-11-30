@@ -47,7 +47,7 @@ with tab2:
     x_scaled
     
 
-   
+   x.shape, y.shape
 
    
 
