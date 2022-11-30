@@ -38,7 +38,7 @@ with tab2:
     fruits['fruit_name'].value_counts()
     X=data.drop(columns=['fruit_name','fruit_subtype'],axis=1)
 
-    st.dataframe(X)
+    X
     
 
    
