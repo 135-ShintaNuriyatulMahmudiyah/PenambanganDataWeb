@@ -44,6 +44,7 @@ with tab2:
     y = data["fruit_label"].values
     
     st.write("""# Normalisasi MinMaxScaler""")
+    "###Mengubah skala nilai terkecil dan terbesar dari dataset ke skala tertentu.pada dataset ini skala terkecil =0, skala terbesar=1"
     
     scaler = preprocessing.MinMaxScaler(feature_range=(0,1))
     x_scaled= scaler.fit_transform(x)
