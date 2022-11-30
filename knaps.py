@@ -29,6 +29,7 @@ st.write("Grade: Penambangan Data A")
 tab1, tab2, tab3, tab4 = st.tabs(["Import Data", "Preprocessing", "Modelling", "Implementation"])
 with tab1:
     st.write("Import Data")
+    st.write("Disini dataset yang saya gunakan adalah Fruit With Color Dataset dengan jumlah data 59. berikut link datasetnya : https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/fruit_data_with_colors.txt ")
     data = pd.read_table("https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/fruit_data_with_colors.txt")
     st.dataframe(data)
 with tab2:
