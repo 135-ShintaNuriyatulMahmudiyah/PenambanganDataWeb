@@ -19,29 +19,24 @@ from sklearn.svm import SVC
 import altair as alt
 from sklearn.utils.validation import joblib
 
-st.title("Penambangan Data Web")
+st.title("Fruit With Color")
 
 st.write("=========================================================================")
 
 st.write("Name :Shinta Nuriyatul Mahmudiyah")
 st.write("Nim  :200411100135")
 st.write("Grade: Penambangan Data A")
-tab1,tab2,tab3,tab4 = st.tabs(["Upload Data", "Prepocessing", "Modeling", "Implementation"])
+tab1, tab2, tab3, tab4 = st.tabs(["Import Data", "Preprocessing", "Modelling", "Implementation"])
 with tab1:
-    st.write("""# Upload File""")
-    st.write("Dataset yang digunakan adalah fruit with color dataset yang diambil dari https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
-    st.write("Total datanya adalah ... dengan data training ..... dan data testing ...... ")
-    uploaded_files = st.file_uploader("Upload file TXT", accept_multiple_files=True)
-    for uploaded_file in uploaded_files:
-        df = pd.read_table(uploaded_file)
-        st.write("Nama File Anda = ", uploaded_file.name)
-        st.dataframe(df)
+    st.write("Import Data")
+    data = pd.read_csv("https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/fruit_data_with_colors.txt")
+    st.dataframe(data)
 with tab2:
-    st.write("""# Preprocessing""")
-    st.dataframe(df)
-    df.head()
-    df= df.drop(columns=['fruit_name','fruit_subtype'])
-    df.head()
+    data.head()
+
+    X = data.drop(columns=["fruit_name","fruit_subtype"])
+
+    X.head()
     
 
    
