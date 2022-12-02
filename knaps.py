@@ -19,9 +19,9 @@ from sklearn.svm import SVC
 import altair as alt
 from sklearn.utils.validation import joblib
 
-st.title("Fruit With Color")
+st.title("Aplikasi Fruit With Color")
 
-st.write("=========================================================================")
+st.write("*************************************************************************************")
 
 st.write("Name :Shinta Nuriyatul Mahmudiyah")
 st.write("Nim  :200411100135")
