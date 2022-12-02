@@ -147,9 +147,9 @@ with tab4:
             st.write(f"Berdasarkan data yang Anda masukkan, maka anda dinyatakan : {le.inverse_transform(y_pred3)[0]}")
 
     all = st.button("Submit")
-        if all :
-            st.balloons()
-            submit()
+    if all :
+        st.balloons()
+        submit()
 
     
 
