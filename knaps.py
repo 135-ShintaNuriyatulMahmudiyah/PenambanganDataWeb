@@ -19,7 +19,7 @@ from sklearn.svm import SVC
 import altair as alt
 from sklearn.utils.validation import joblib
 
-st.title("Aplikasi Fruit With Color")
+st.title("Aplication Fruit With Color")
 
 st.write("*************************************************************************************")
 
