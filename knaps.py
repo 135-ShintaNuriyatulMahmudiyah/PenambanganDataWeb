@@ -138,18 +138,18 @@ with tab4:
 
     #color_score
     color_score = st.number_input('Masukkan nilai warna buah')
-def submit():
-        # input
-        inputs = np.array([[mass,width,height,color_score]])
-        le = joblib.load("le.save")
-        model1 = joblib.load("knn.joblib")
-        y_pred3 = model1.predict(inputs)
-        st.write(f"Berdasarkan data yang Anda masukkan, maka anda dinyatakan : {le.inverse_transform(y_pred3)[0]}")
+    def submit():
+            # input
+            inputs = np.array([[mass,width,height,color_score]])
+            le = joblib.load("le.save")
+            model1 = joblib.load("knn.joblib")
+            y_pred3 = model1.predict(inputs)
+            st.write(f"Berdasarkan data yang Anda masukkan, maka anda dinyatakan : {le.inverse_transform(y_pred3)[0]}")
 
-all = st.button("Submit")
-    if all :
-        st.balloons()
-        submit()
+    all = st.button("Submit")
+        if all :
+            st.balloons()
+            submit()
 
     
 
