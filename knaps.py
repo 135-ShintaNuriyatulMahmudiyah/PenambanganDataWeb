@@ -127,17 +127,17 @@ with tab3:
         st.altair_chart(bar_chart,use_container_width=True)
 with tab4:
     st.write("# Implementation")
-    mass = st.number_input('Masukkan berat buah')
+    mass = st.number_input('Input The Mass Fruit')
 
     # width
-    width = st.number_input('Masukkan lebar buah')
+    width = st.number_input('Input The Width Fruit')
     
 
     # height
-    width = st.number_input('Masukkan tinggi buah')
+    width = st.number_input('Input The Height Fruit')
 
     #color_score
-    color_score = st.number_input('Masukkan nilai warna buah')
+    color_score = st.number_input('Input The Color Score Fruit')
     def submit():
             # input
             inputs = np.array([[mass,width,height,color_score]])
