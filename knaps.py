@@ -28,7 +28,7 @@ with data_set_description:
     st.write("""# Data Set Description """)
     st.write("###### Data Set Ini Adalah : Fruit with Color ")
     st.write("###### Sumber Data Set dari Kaggle : https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
-     st.write("""Dalam dataset ini terdapat 7 kolom yaitu fruit label, fruit name, fruit subtype, mass width, height, dan color score. Untuk
+    st.write("""Dalam dataset ini terdapat 7 kolom yaitu fruit label, fruit name, fruit subtype, mass width, height, dan color score. Untuk
      dataset ini mempunyai 4 kelas yaitu Apple, Mandarin, Orange, dan Lemon 
    
     """)
