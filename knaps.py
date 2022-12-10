@@ -14,7 +14,7 @@ from sklearn.tree import DecisionTreeClassifier
 # warnings.filterwarnings("ignore")
 
 
-st.title("Apliccation Prediction Fruit With Color")
+st.title("Web Apps - Classification Fruit With Color")
 
 st.write("================================================================================")
 
