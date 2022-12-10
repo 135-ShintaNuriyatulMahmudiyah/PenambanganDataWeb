@@ -29,23 +29,36 @@ with data_set_description:
     st.write("###### Data Set Ini Adalah : Fruit with Color ")
     st.write("###### Sumber Data Set dari Kaggle : https://www.kaggle.com/datasets/mjamilmoughal/fruits-with-colors-dataset")
     st.write("""###### Penjelasan setiap kolom : """)
-    st.write("""1. Fruit Name (Nama Buah) :
+    st.write("""1. Fruit Label (Label Buah) :
+    Label Buah ini menrupakan pengganti nama buah. Berikur penjelasan:
+    1. Apel
+    2. Mandarin
+    3. Orange
+    4. Lemon
+   
+    """)
+    st.write("""2. Fruit Name (Nama Buah) :
     ini akan menjadi outputnya yaitu nama buah.Dalam Aplikasi ini akan nama nuah yang akan diprediksi ada 4 yaitu Apple, Orange, Mandarin, dan Lemon.
    
     """)
-    st.write("""2. Mass (Massa Buah) :
+    
+    st.write("""3. Fruit Subtype (Tipe Buah) :
+    Ini merupakan tipe buah. untuk buah apel, mandarin, orange, dan lemon mempunyai tipe buah yang berbeda- beda. 
+   
+    """)
+    st.write("""4. Mass (Massa Buah) :
     setiap buah mempunyai berat dengan satuan gram. setiap buah juga mempunyai massa buah yang berbeda - beda.
     
     """)
-    st.write("""3. Width (Lebar Buah):
+    st.write("""5. Width (Lebar Buah):
     setiap buah mempunyai lebar buah yang berbeda - beda.
     
     """)
-    st.write("""4. Height (Tinggi Buah):
+    st.write("""6. Height (Tinggi Buah):
     setiap buah mempunyai tinggi buah yang berbeda - beda.
     
     """)
-    st.write("""5. Color_Score (Skor Warna) :
+    st.write("""7. Color_Score (Skor Warna) :
     setiap buah mempunyai skor warna  yang berbeda - beda.
     
     """)
