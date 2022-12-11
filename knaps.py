@@ -22,7 +22,7 @@ st.write("Name :Shinta Nuriyatul Mahmudiyah")
 st.write("Nim  :200411100135")
 st.write("Grade: Penambangan Data A")
 
-data_set_description, upload_data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Data", "Preprocessing", "Modeling", "Implementation"])
+data_set_description, data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Data", "Preprocessing", "Modeling", "Implementation"])
 
 with data_set_description:
     st.write("""# Data Set Description """)
