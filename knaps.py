@@ -22,7 +22,7 @@ st.write("Name :Shinta Nuriyatul Mahmudiyah")
 st.write("Nim  :200411100135")
 st.write("Grade: Penambangan Data A")
 
-data_set_description, upload_data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Upload Data", "Preprocessing", "Modeling", "Implementation"])
+data_set_description, upload_data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Data", "Preprocessing", "Modeling", "Implementation"])
 
 with data_set_description:
     st.write("""# Data Set Description """)
@@ -81,12 +81,7 @@ with data_set_description:
     st.write("###### Source Code Aplikasi ada di Github anda bisa acces di link : https://github.com/135-ShintaNuriyatulMahmudiyah/PenambanganDataWeb ")
     st.write("###### Untuk Wa saya anda bisa hubungi nomer ini : http://wa.me/6285704097096 ")
 
-with upload_data:
-    # uploaded_files = st.file_uploader("Upload file TXT", accept_multiple_files=True)
-    # for uploaded_file in uploaded_files:
-    #     df = pd.read_table(uploaded_file)
-    #     st.write("Nama File Anda = ", uploaded_file.name)
-    #     st.dataframe(df)
+with data:
     df = pd.read_table('https://raw.githubusercontent.com/135-ShintaNuriyatulMahmudiyah/Data/main/fruit_data_with_colors.txt')
     st.dataframe(df)
 
