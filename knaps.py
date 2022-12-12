@@ -14,7 +14,7 @@ from sklearn.tree import DecisionTreeClassifier
 # warnings.filterwarnings("ignore")
 
 
-st.title("Web Apps - Classification Fruit With Color")
+st.title("Web Apps - Classification Fruit With Colors")
 
 st.write("================================================================================")
 
@@ -34,7 +34,7 @@ with data_set_description:
     """)
     st.write("""###### Penjelasan setiap kolom : """)
     st.write("""1. Fruit Label (Label Buah) :
-    Label Buah ini menrupakan pengganti nama buah. Berikur penjelasan:
+    Label Buah ini merupakan pengganti nama buah. Berikur penjelasan:
     1. Apel
     2. Mandarin
     3. Orange
@@ -42,7 +42,7 @@ with data_set_description:
    
     """)
     st.write("""2. Fruit Name (Nama Buah) :
-    ini akan menjadi outputnya yaitu nama buah.Dalam Aplikasi ini akan nama nuah yang akan diprediksi ada 4 yaitu Apple, Orange, Mandarin, dan Lemon.
+    ini akan menjadi outputnya yaitu nama buah.Dalam Aplikasi ini akan nama buah yang akan diprediksi ada 4 yaitu Apple, Orange, Mandarin, dan Lemon.
    
     """)
     
