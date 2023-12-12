@@ -5,7 +5,11 @@ import pip
 pip.main(["install", "openpyxl"])
 import re
 import string
-
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 pip.main(["install", "Sastrawi"])
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from sklearn.model_selection import train_test_split
